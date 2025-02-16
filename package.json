@@ -1,0 +1,40 @@
+{
+  "name": "@autoquote3d/3d-thumbnail-renderer",
+  "version": "1.0.1",
+  "description": "React hook for generating 3D model thumbnails from STL and OBJ files",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "devDependencies": {
+    "@types/react": "^18.2.20",
+    "@types/three": "^0.173.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "three": "^0.169.0",
+    "typescript": "^5.1.6"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "keywords": [
+    "react",
+    "3d",
+    "thumbnail",
+    "stl",
+    "obj",
+    "model",
+    "renderer"
+  ],
+  "author": "Tyler McGinnis, Ben Adam",
+  "license": "MIT"
+}
