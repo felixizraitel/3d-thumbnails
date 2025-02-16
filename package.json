@@ -1,11 +1,18 @@
 {
   "name": "@autoquote3d/3d-thumbnail-renderer",
-  "version": "1.0.1",
+  "version": "1.0.11",
   "description": "React hook for generating 3D model thumbnails from STL and OBJ files",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    }
+  },
   "scripts": {
     "build": "tsc",
     "prepublishOnly": "npm run build"
@@ -24,7 +31,8 @@
   },
   "peerDependencies": {
     "react": ">=18.0.0",
-    "react-dom": ">=18.0.0"
+    "react-dom": ">=18.0.0",
+    "three": ">=0.169.0"
   },
   "keywords": [
     "react",
