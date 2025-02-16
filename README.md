@@ -15,21 +15,21 @@ import { useModelThumbnail } from "@autoquote3d/3d-thumbnail-renderer";
 
 function ModelPreview() {
   const file = new File();
-  const { thumbnail, loading, error } = useModelThumbnail({
+  const { data, loading, error, progress } = useModelThumbnail({
     url: URL.createObjectURL(file), // or some other valid url
     fileType: "stl",
     color: "#808080", // optional, defaults to gray
   });
 
-  if (loading.status !== "complete") {
-    return <div>Loading... {loading.progress}%</div>;
+  if (loading) {
+    return <div>Loading... {progress}%</div>;
   }
 
   if (error) {
     return <div>Error: {error}</div>;
   }
 
-  return <img src={thumbnail} alt="3D Model Thumbnail" />;
+  return <img src={data} alt="3D Model Thumbnail" />;
 }
 ```
 
@@ -41,9 +41,10 @@ function ModelPreview() {
 
 ## Return Values
 
-- `thumbnail`: Base64 encoded image data URL
-- `loading`: Object containing loading status and progress
+- `data`: Base64 encoded image data URL when complete
+- `loading`: Boolean indicating if the thumbnail is being generated
 - `error`: Error message if something goes wrong
+- `progress`: Number indicating the download progress percentage
 
 ## License
 
