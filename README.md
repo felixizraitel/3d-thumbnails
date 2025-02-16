@@ -1,5 +1,7 @@
 # @autoquote3d/3d-thumbnail-renderer
 
+See it in action here: https://3d-thumbnail-example.vercel.app/
+
 A React hook for generating thumbnails from 3D model files (STL and OBJ).
 
 ## Installation
